@@ -2,6 +2,10 @@ import colors from 'vuetify/es5/util/colors'
 
 export default {
 
+  axios: {
+    baseURL: process.env.API_URL,
+  },
+
   // 環境変数
   privateRuntimeConfig: {
     apiURL: process.env.API_URL,
@@ -20,6 +24,14 @@ export default {
         name: 'page',
       })
     },
+  },
+
+  microcms: {
+    options: {
+      serviceDomain: process.env.SERVICE_DOMAIN,
+      apiKey: process.env.API_SECRET,
+    },
+    mode: process.env.NODE_ENV === 'production' ? 'server' : 'all',
   },
 
   generate: {
@@ -62,10 +74,12 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    'nuxt-microcms-module'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios'
   ],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
