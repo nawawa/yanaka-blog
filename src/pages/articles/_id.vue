@@ -1,5 +1,5 @@
 <template>
-  <button @click="show">記事</button>
+  <div v-html='article.content'></div>
 </template>
 
 <script>
