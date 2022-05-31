@@ -1,10 +1,15 @@
 <template>
   <div>
-    <v-col :cols="xs" v-for="article in articles" :key="article.id">
-      <NuxtLink :to="`/articles/${article.id}`">
-        <p>{{ article.title }}</p>
-      </NuxtLink>
-    </v-col>
+    <v-row>
+      <v-col :cols="xs" v-for="article in articles" :key="article.id">
+        <NuxtLink :to="`/articles/${article.id}`">
+          <div>
+            <img :src="article.eyecatch.url" alt="">
+            <p>{{ article.title }}</p>
+          </div>
+        </NuxtLink>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
