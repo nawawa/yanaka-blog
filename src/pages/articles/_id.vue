@@ -10,10 +10,5 @@ export default {
     });
     return { article: data };
   },
-  methods: {
-    show() {
-      console.log(this.article);
-    }
-  }
 }
 </script>

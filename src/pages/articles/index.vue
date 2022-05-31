@@ -14,7 +14,6 @@ export default {
     const data = await $microcms.get({
       endpoint: `blogs`,
     });
-    console.log(data);
     return { articles: data.contents };
   },
   computed: {
