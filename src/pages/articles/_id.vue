@@ -1,5 +1,9 @@
 <template>
-  <div v-html='article.content'></div>
+  <article>
+    <img :src="article.eyecatch.url" alt="">
+    <h1>{{ article.title }}</h1>
+    <div v-html='article.content'></div>
+  </article>
 </template>
 
 <script>
