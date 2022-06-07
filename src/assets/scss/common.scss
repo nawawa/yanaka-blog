@@ -1,0 +1,23 @@
+/*
+共通スタイル
+*/
+
+body {
+  background: var(--v-background-base);
+  color: var(--v-font-base);
+}
+
+p {
+  letter-spacing: 0.03em !important;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+code span {
+  font-size: 0.9em;
+}
