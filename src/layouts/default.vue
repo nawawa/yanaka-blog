@@ -1,7 +1,7 @@
 <template>
-  <v-app :style="{background: $vuetify.theme.themes[mode].background}">
-    <LayoutsNavigationDrawer :mode="mode" v-model="drawer" />
-    <LayoutsAppBar :mode="mode" @toggleDrawer="toggleDrawer" />
+  <v-app :style="{background: $vuetify.theme.themes['light'].background}">
+    <LayoutsNavigationDrawer v-model="drawer" />
+    <LayoutsAppBar @toggleDrawer="toggleDrawer" />
     <v-main>
       <Nuxt />
     </v-main>
@@ -13,11 +13,6 @@ export default {
   data () {
     return {
       drawer: false,
-    }
-  },
-  computed: {
-    mode() {
-      return (this.$vuetify.theme.dark === true) ? "dark": "light";
     }
   },
   methods: {

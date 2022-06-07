@@ -1,6 +1,6 @@
 <template>
   <NuxtLink to="/">
-    <v-img :src="require('@/assets/images/yanaken.svg')" max-width="100" />
+    <v-img :src="require('@/assets/images/yanaken_logo.svg')" max-width="100" />
   </NuxtLink>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <UIAppBarBody v-bind="$attrs" @toggleDrawer="$emit('toggleDrawer')">
+  <UIAppBarBody @toggleDrawer="$emit('toggleDrawer')">
     <UIAppBarLogo />
     <v-spacer />
     <div></div>

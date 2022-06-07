@@ -1,6 +1,6 @@
 <template>
   <v-app-bar
-    :style="{background: $vuetify.theme.themes[mode].background}" 
+    :style="{background: $vuetify.theme.themes['light'].background}" 
     :clipped-left="clipped"
     fixed 
     flat 
@@ -12,9 +12,6 @@
 
 <script>
 export default {
-  props: {
-    mode: String
-  },
   data() {
     return {
       clipped: false,

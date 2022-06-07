@@ -61,6 +61,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    { src: '~/assets/scss/common.scss' },
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -90,19 +91,8 @@ export default {
       options: {
         customProperties: true
       },
-      dark: true,
+      light: true,
       themes: {
-        dark: {
-          font: '#F5F5F5',
-          background: `#282F43`,
-          primary: `#6C8CB3`,
-          accent: `#353B51`,
-          secondary: `#9D7D66`,
-          info: `#56A597`,
-          warning: `#B6B480`,
-          error: `#AB7878`,
-          success: `#539164`
-        },
         light: {
           font: '#473838',
           background: `#EEEEEE`,
