@@ -3,7 +3,7 @@
     <LayoutsArticleHeader 
       :authors="authors" 
       :eyecatch_url="eyecatch_url" 
-      :title="article.title"
+      :title="title"
     />
     <div v-html='article'></div>
     <aside>
@@ -18,7 +18,9 @@ export default {
     const data = await $microcms.get({
       endpoint: `blogs/${params.id}`,
     });
+    console.log(data);
     return { 
+      title: data.title,
       article: data.content, 
       eyecatch_url: data.eyecatch.url, 
       authors: data.author 
