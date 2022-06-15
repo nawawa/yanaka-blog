@@ -1,11 +1,10 @@
 <template>
-  
+  <header>
+    <slot />
+  </header>
 </template>
 
 <script>
 export default {
-  props: {
-    authors: Array
-  }
 }
 </script>

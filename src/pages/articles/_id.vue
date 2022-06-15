@@ -1,11 +1,10 @@
 <template>
   <article>
-    <header>
-      <img :src="eyecatch_url" alt="">
-      <h1>{{ article.title }}</h1>
-      <!-- TODO:著者名 -->
-      <LayoutsArticlePage :authors="authors" />
-    </header>
+    <LayoutsArticleHeader 
+      :authors="authors" 
+      :eyecatch_url="eyecatch_url" 
+      :title="article.title"
+    />
     <div v-html='article'></div>
     <aside>
       <!-- TODO:シェアとか -->
@@ -27,3 +26,9 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+  article {
+    padding: 0 6%;
+  }
+</style>
