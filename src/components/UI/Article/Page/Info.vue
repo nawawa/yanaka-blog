@@ -1,5 +1,5 @@
 <template>
-  <v-row align>
+  <v-row>
     <slot />
   </v-row>
 </template>
