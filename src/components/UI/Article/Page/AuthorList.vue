@@ -12,5 +12,6 @@ export default {
 <style lang="scss" scoped>
   ul {
     list-style-type: none;
+    padding: 0 !important;
   }
 </style>
