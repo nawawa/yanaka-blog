@@ -1,9 +1,14 @@
 <template>
   <UIArticlePageHeader>
     <UIArticlePageEyeCatch :eyecatch_url="eyecatch_url" />
-    <UIArticlePageCategory :category="category" />
-    <UIArticlePageReleaseDate :release="release" />
+
+    <UIArticlePageInfo>
+      <UIArticlePageCategory :category="category" />
+      <UIArticlePageReleaseDate :release="release" />
+    </UIArticlePageInfo>
+
     <UIArticlePageTitle :title="title" />
+    
     <UIArticlePageAuthorList v-for="author in authors" :key="author.index">
       <UIArticlePageAuthor :author="author" />
     </UIArticlePageAuthorList>
