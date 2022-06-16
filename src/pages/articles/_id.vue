@@ -1,11 +1,13 @@
 <template>
   <article>
-    <header>
-      <img :src="article.eyecatch.url" alt="">
-      <h1>{{ article.title }}</h1>
-      <!-- TODO:著者名 -->
-    </header>
-    <div v-html='article.content'></div>
+    <LayoutsArticleHeader 
+      :category="category" 
+      :authors="authors" 
+      :eyecatch_url="eyecatch_url" 
+      :title="title" 
+      :release="release"
+    />
+    <div v-html='article'></div>
     <aside>
       <!-- TODO:シェアとか -->
     </aside>
@@ -18,7 +20,20 @@ export default {
     const data = await $microcms.get({
       endpoint: `blogs/${params.id}`,
     });
-    return { article: data };
+    return { 
+      title: data.title,
+      article: data.content, 
+      eyecatch_url: data.eyecatch.url, 
+      authors: data.author,
+      category: data.category,
+      release: new Date(data.createdAt)
+    };
   },
 }
 </script>
+
+<style lang="scss" scoped>
+  article {
+    padding: 0 6%;
+  }
+</style>
