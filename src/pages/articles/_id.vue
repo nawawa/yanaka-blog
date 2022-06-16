@@ -1,9 +1,11 @@
 <template>
   <article>
     <LayoutsArticleHeader 
+      :category="category" 
       :authors="authors" 
       :eyecatch_url="eyecatch_url" 
-      :title="title"
+      :title="title" 
+      :release="release"
     />
     <div v-html='article'></div>
     <aside>
@@ -22,7 +24,9 @@ export default {
       title: data.title,
       article: data.content, 
       eyecatch_url: data.eyecatch.url, 
-      authors: data.author 
+      authors: data.author,
+      category: data.category,
+      release: new Date(data.createdAt)
     };
   },
 }
