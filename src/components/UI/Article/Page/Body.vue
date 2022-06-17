@@ -11,6 +11,6 @@ export default {
 
 <style lang="scss" scoped>
   article {
-    padding: 0 6%;
+    padding: 0 20%;
   }
 </style>
