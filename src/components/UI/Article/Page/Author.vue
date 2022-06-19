@@ -22,7 +22,9 @@ export default {
     }
   }
   img {
+    border-radius: 50%;
     width: 36px;
     height: 36px;
+    margin-right: 10px;
   }
 </style>
