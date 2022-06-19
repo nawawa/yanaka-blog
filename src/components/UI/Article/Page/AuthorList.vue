@@ -13,5 +13,6 @@ export default {
   ul {
     list-style-type: none;
     padding: 0 !important;
+    margin: 30px 0;
   }
 </style>
