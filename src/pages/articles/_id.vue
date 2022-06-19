@@ -1,5 +1,6 @@
 <template>
-  <article>
+  <LayoutsArticlePageBody>
+
     <LayoutsArticleHeader 
       :category="category" 
       :authors="authors" 
@@ -11,7 +12,8 @@
     <aside>
       <!-- TODO:シェアとか -->
     </aside>
-  </article>
+
+  </LayoutsArticlePageBody>
 </template>
 
 <script>
@@ -31,9 +33,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-  article {
-    padding: 0 20%;
-  }
-</style>

@@ -1,6 +1,6 @@
 <template>
   <UIArticlePageBody>
-    
+    <slot />
   </UIArticlePageBody>
 </template>
 
