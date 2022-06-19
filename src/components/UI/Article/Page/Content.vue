@@ -1,5 +1,7 @@
 <template>
-  <div v-html="content" />
+  <section>
+    <div v-html="content" />
+  </section>
 </template>
 
 <script>
@@ -17,8 +19,10 @@ export default {
     },
   },
   mounted() {
+    const section = document.getElementsByTagName('section');
+
     this.styling(
-      document.getElementsByTagName('h2'),
+      section[0].getElementsByTagName('h2'),
       `
         font-size: 1.6em;
         line-height: 1.5;
@@ -28,7 +32,7 @@ export default {
     );
 
     this.styling(
-      document.getElementsByTagName('h3'),
+      section[0].getElementsByTagName('h3'),
       `
         font-size: 1.4em;
         line-height: 1.5;
@@ -38,7 +42,7 @@ export default {
     );
 
     this.styling(
-      document.getElementsByTagName('img'),
+      section[0].getElementsByTagName('img'),
       `
         margin: 1.5em 0;
         max-width: 100%;
