@@ -1,5 +1,5 @@
 <template>
-  <LayoutsArticlePageBody>
+  <LayoutsArticleBody>
 
     <LayoutsArticleHeader 
       :category="category" 
@@ -8,12 +8,13 @@
       :title="title" 
       :release="release"
     />
-    <div v-html='article'></div>
     <aside>
       <!-- TODO:シェアとか -->
     </aside>
 
-  </LayoutsArticlePageBody>
+    <LayoutsArticleContent :content="content" />
+
+  </LayoutsArticleBody>
 </template>
 
 <script>
@@ -24,7 +25,7 @@ export default {
     });
     return { 
       title: data.title,
-      article: data.content, 
+      content: data.content, 
       eyecatch_url: data.eyecatch.url, 
       authors: data.author,
       category: data.category,

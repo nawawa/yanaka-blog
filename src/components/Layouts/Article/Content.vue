@@ -1,7 +1,5 @@
 <template>
-  <UIArticlePageBody>
-    <slot />
-  </UIArticlePageBody>
+  <UIArticlePageContent :content="content" />
 </template>
 
 <script>

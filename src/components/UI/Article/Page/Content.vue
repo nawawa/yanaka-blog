@@ -1,7 +1,5 @@
 <template>
-  <UIArticlePageBody>
-    <slot />
-  </UIArticlePageBody>
+  <div v-html="content" />
 </template>
 
 <script>
