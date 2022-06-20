@@ -17,6 +17,25 @@ export default {
         });
       };
     },
+    alignImageCenter() {
+      return (imgs) => {
+        Array.prototype.forEach.call(imgs, function(img) {
+          const div = document.createElement('div');
+          img.replaceWith(div);
+          div.appendChild(img);
+          div.style = 
+          `
+            margin: 1.5em 0;
+            text-align: center;
+          `;
+
+          img.style = 
+          `
+            max-width: 100%;
+          `;
+        });
+      }
+    }
   },
   mounted() {
     const section = document.getElementsByTagName('section');
@@ -41,13 +60,8 @@ export default {
       `
     );
 
-    this.styling(
-      section[0].getElementsByTagName('img'),
-      `
-        margin: 1.5em 0;
-        max-width: 100%;
-        text-align: center;
-      `
+    this.alignImageCenter(
+      section[0].getElementsByTagName('img')
     );
   }
 }
