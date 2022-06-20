@@ -9,7 +9,7 @@
 
     <UIArticlePageTitle :title="title" />
 
-    <p>{{ summary }}</p>
+    <UIArticlePageSummary :summary="summary" />
 
     <UIArticlePageAuthorList v-for="author in authors" :key="author.index">
       <UIArticlePageAuthor :author="author" />
