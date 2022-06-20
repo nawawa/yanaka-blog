@@ -8,7 +8,9 @@
     </UIArticlePageInfo>
 
     <UIArticlePageTitle :title="title" />
-    
+
+    <p>{{ summary }}</p>
+
     <UIArticlePageAuthorList v-for="author in authors" :key="author.index">
       <UIArticlePageAuthor :author="author" />
     </UIArticlePageAuthorList>
@@ -22,7 +24,8 @@ export default {
     authors: Array,
     eyecatch_url: String,
     title: String,
-    release: Date
+    release: Date,
+    summary: String
   }
 }
 </script>

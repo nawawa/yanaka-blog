@@ -6,7 +6,8 @@
       :authors="authors" 
       :eyecatch_url="eyecatch_url" 
       :title="title" 
-      :release="release"
+      :release="release" 
+      :summary="summary"
     />
     <aside>
       <!-- TODO:シェアとか -->
@@ -29,7 +30,8 @@ export default {
       eyecatch_url: data.eyecatch.url, 
       authors: data.author,
       category: data.category,
-      release: new Date(data.createdAt)
+      release: new Date(data.createdAt),
+      summary: data.summary
     };
   },
 }
