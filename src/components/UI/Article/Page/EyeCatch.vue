@@ -1,12 +1,14 @@
 <template>
-  <v-responsive
-    :width="width"
-    class="mx-auto"
-  >
-    <img 
-      :src="eyecatch_url" alt="" 
+  <div>
+    <v-responsive
+      :width="width"
+      class="mx-auto"
     >
-  </v-responsive>
+      <img 
+        :src="eyecatch_url" alt="" 
+      >
+    </v-responsive>
+  </div>
 </template>
 
 <script>
@@ -25,5 +27,14 @@ export default {
 <style lang="scss" scoped>
   img {
     width: 100%;
+  }
+
+  div {
+    width: 100%;
+    height: auto;
+    line-height: 0%;
+    background-image: url("~@/assets/images/japanese_paper.jpeg");
+    background-color:rgba(230, 230, 230, 0.8);
+    background-blend-mode:lighten;
   }
 </style>
