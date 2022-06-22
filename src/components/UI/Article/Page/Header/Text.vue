@@ -1,7 +1,7 @@
 <template>
-  <article>
+  <UIArticlePageResponsive>
     <slot />
-  </article>
+  </UIArticlePageResponsive>
 </template>
 
 <script>

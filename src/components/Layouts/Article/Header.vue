@@ -2,18 +2,20 @@
   <UIArticlePageHeader>
     <UIArticlePageEyeCatch :eyecatch_url="eyecatch_url" />
 
-    <UIArticlePageInfo>
-      <UIArticlePageCategory :category="category" />
-      <UIArticlePageReleaseDate :release="release" />
-    </UIArticlePageInfo>
+    <UIArticlePageHeaderText>
+      <UIArticlePageInfo>
+        <UIArticlePageCategory :category="category" />
+        <UIArticlePageReleaseDate :release="release" />
+      </UIArticlePageInfo>
 
-    <UIArticlePageTitle :title="title" />
+      <UIArticlePageTitle :title="title" />
 
-    <UIArticlePageSummary :summary="summary" />
+      <UIArticlePageSummary :summary="summary" />
 
-    <UIArticlePageAuthorList v-for="author in authors" :key="author.index">
-      <UIArticlePageAuthor :author="author" />
-    </UIArticlePageAuthorList>
+      <UIArticlePageAuthorList v-for="author in authors" :key="author.index">
+        <UIArticlePageAuthor :author="author" />
+      </UIArticlePageAuthorList>
+    </UIArticlePageHeaderText>
   </UIArticlePageHeader>
 </template>
 

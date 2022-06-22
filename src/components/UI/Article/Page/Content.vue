@@ -1,7 +1,9 @@
 <template>
-  <section>
-    <div v-html="content" />
-  </section>
+  <UIArticlePageResponsive>
+    <section>
+      <div v-html="content" />
+    </section>
+  </UIArticlePageResponsive>
 </template>
 
 <script>
