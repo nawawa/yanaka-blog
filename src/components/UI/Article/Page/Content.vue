@@ -1,7 +1,12 @@
 <template>
-  <section>
-    <div v-html="content" />
-  </section>
+  <v-responsive
+    :width="width"
+    class="mx-auto"
+  >
+    <section>
+      <div v-html="content" />
+    </section>
+  </v-responsive>
 </template>
 
 <script>
@@ -10,6 +15,9 @@ export default {
     content: String
   },
   computed: {
+    width() {
+      return (this.$vuetify.breakpoint.name === `xs`) ? "90%": "60%";
+    },
     styling() {
       return (elements, styles) => {
           Array.prototype.forEach.call(elements, function(el) {
