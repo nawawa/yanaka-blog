@@ -1,5 +1,7 @@
 <template>
-  <p>{{ summary }}</p>
+  <Pelement>
+    {{ summary }}
+  </Pelement>
 </template>
 
 <script>

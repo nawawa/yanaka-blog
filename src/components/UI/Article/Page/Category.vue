@@ -1,6 +1,8 @@
 <template>
   <v-col cols="6">
-    <p>{{ category.name }}</p>
+    <Pelement>
+      {{ category.name }}
+    </Pelement>
   </v-col>
 </template>
 

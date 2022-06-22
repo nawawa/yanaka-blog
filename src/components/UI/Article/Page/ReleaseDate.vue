@@ -1,10 +1,10 @@
 <template>
   <v-col cols="6">
-    <p>
+    <Pelement>
       {{ release.getFullYear() }} 年
       {{ release.getMonth() + 1}} 月
       {{ release.getDate() }} 日
-    </p>
+    </Pelement>
   </v-col>
 </template>
 

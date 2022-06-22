@@ -14,7 +14,7 @@ export default {
   computed: {
     styling() {
       return (elements, styles) => {
-          Array.prototype.forEach.call(elements, function(el) {
+        Array.prototype.forEach.call(elements, function(el) {
           el.style = styles;
         });
       };
@@ -41,6 +41,15 @@ export default {
   },
   mounted() {
     const section = document.getElementsByTagName('section');
+
+    const fontsize = (this.$vuetify.breakpoint.name === `xs`) ? '14': '16';
+
+    this.styling(
+      section[0].getElementsByTagName('p'),
+      `
+        font-size: ` + fontsize + `px;
+      `
+    );
 
     this.styling(
       section[0].getElementsByTagName('h2'),
