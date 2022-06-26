@@ -13,7 +13,7 @@ export default {
     attribute() {
       return (this.$vuetify.breakpoint.name === `xs`) ?
         { class: `text-h5`}:
-        { style: `font-size: 35px` }
+        { style: `font-size: 30px` }
     }
   }
 }
