@@ -4,6 +4,7 @@
     :clipped-left="clipped"
     fixed 
     flat 
+    hide-on-scroll 
     app
   >
     <slot />
