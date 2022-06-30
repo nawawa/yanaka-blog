@@ -26,7 +26,11 @@
                 :key="author.index" 
                 class="mb-0 mt-2"
               >
-                <UIArticlePageAuthor :author="author" />
+                <UIArticlePageAuthor 
+                  :icon_size="14" 
+                  :font_size="10"
+                  :author="author" 
+                />
               </UIArticlePageAuthorList>
             </div>
           </v-card>

@@ -1,14 +1,20 @@
 <template>
   <li>
-    <img :src="author.icon.url" alt="">
-    <p>{{ author.name }}</p>
+    <img 
+      :src="author.icon.url" alt=""
+      class="mr-2"
+      :style="`width:${icon_size}px; height:${icon_size}px;`"
+    >
+    <p :style="`font-size: ${font_size}px;`">{{ author.name }}</p>
   </li>
 </template>
 
 <script>
 export default {
   props: {
-    author: Object
+    author: Object,
+    icon_size: Number,
+    font_size: Number
   },
 }
 </script>
@@ -23,8 +29,5 @@ export default {
   }
   img {
     border-radius: 50%;
-    width: 36px; // カードの方では12にしたい
-    height: 36px; // カードの方では12にしたい
-    margin-right: 10px;
   }
 </style>

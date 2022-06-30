@@ -13,7 +13,7 @@
       <UIArticlePageSummary :summary="summary" />
 
       <UIArticlePageAuthorList v-for="author in authors" :key="author.index">
-        <UIArticlePageAuthor :author="author" />
+        <UIArticlePageAuthor :font_size="16" :icon_size="36" :author="author" />
       </UIArticlePageAuthorList>
     </UIArticlePageHeaderText>
   </UIArticlePageHeader>
