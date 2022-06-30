@@ -11,7 +11,7 @@
 export default {
   computed: {
     width() {
-      return (this.$vuetify.breakpoint.name === `xs`) ? "90%": "74%";
+      return (this.$vuetify.breakpoint.name === `xs`) ? "94%": "1064px";
     },
   }
 }

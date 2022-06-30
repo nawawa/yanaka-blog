@@ -18,13 +18,13 @@ export default {
     display: flex;
     align-items: center;
     p {
-      margin: 0 !important;
+      margin: 0 !important; // カードの方では12px
     }
   }
   img {
     border-radius: 50%;
-    width: 36px;
-    height: 36px;
+    width: 36px; // カードの方では12にしたい
+    height: 36px; // カードの方では12にしたい
     margin-right: 10px;
   }
 </style>
