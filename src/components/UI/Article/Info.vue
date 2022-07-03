@@ -1,5 +1,5 @@
 <template>
-  <v-row class="mt-2 mb-1">
+  <v-row class="mt-1 mb-1">
     <slot />
   </v-row>
 </template>

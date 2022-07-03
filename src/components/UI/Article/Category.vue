@@ -3,7 +3,7 @@
     cols="6" 
   >
     <button>
-      <Pelement class="ma-0">
+      <Pelement :font_size="font_size">
         {{ category.name }}
       </Pelement>
     </button>
@@ -13,7 +13,8 @@
 <script>
 export default {
   props: {
-    category: Object
+    category: Object,
+    font_size: Number
   }
 }
 </script>
