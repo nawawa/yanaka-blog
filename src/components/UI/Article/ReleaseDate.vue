@@ -3,7 +3,7 @@
     cols="6" 
   >
     <div id="released_at">
-      <Pelement class="ma-0">
+      <Pelement :font_size="font_size" class="ma-0">
         {{ release.getFullYear() }} 年
         {{ release.getMonth() + 1}} 月
         {{ release.getDate() }} 日
@@ -15,7 +15,8 @@
 <script>
 export default {
   props: {
-    release: Date
+    release: Date,
+    font_size: Number,
   }
 }
 </script>
