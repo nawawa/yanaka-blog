@@ -11,11 +11,12 @@
               :src="article.eyecatch.url" alt=""
             ></v-img>
             <div class="pa-1">
-              <p class="ma-0 text-caption">
-                {{ article.category.name }}
-              </p>
+              <UIArticleInfo>
+                <UIArticleCategory class="py-0" :font_size="`10`" :category="article.category" />
+                <UIArticleReleaseDate class="py-0" :font_size="`10`" :release="new Date(article.createdAt)" />
+              </UIArticleInfo>
               <v-card-title 
-                :class="`pa-1  ${ text }`" 
+                :class="`py-1 px-0  ${ text }`" 
               >
                 <strong>
                   {{ article.title }}
