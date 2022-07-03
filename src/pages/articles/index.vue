@@ -12,8 +12,8 @@
             ></v-img>
             <div class="pa-1">
               <UIArticleInfo>
-                <UIArticleCategory class="py-0" :font_size="`10`" :category="article.category" />
-                <UIArticleReleaseDate class="py-0" :font_size="`10`" :release="new Date(article.createdAt)" />
+                <UIArticleCategory class="py-0" :font_size="10" :category="article.category" />
+                <UIArticleReleaseDate class="py-0" :font_size="10" :release="new Date(article.createdAt)" />
               </UIArticleInfo>
               <v-card-title 
                 :class="`py-1 px-0  ${ text }`" 
