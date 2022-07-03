@@ -1,10 +1,13 @@
 <template>
-  <p :style="`font-size:` + ((this.$vuetify.breakpoint.name === `xs`) ? '14': '16') + `px;`">
+  <p class="ma-0" :style="`font-size:` + font_size + `px;`">
     <slot />
   </p>
 </template>
 
 <script>
 export default {
+  props: {
+    font_size: Number
+  }
 }
 </script>
