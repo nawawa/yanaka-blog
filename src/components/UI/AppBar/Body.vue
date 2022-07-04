@@ -1,13 +1,13 @@
 <template>
-    <!-- :style="{background: $vuetify.theme.themes['light'].background}"  -->
   <v-app-bar
+    color="background"
     absolute 
     flat 
     hide-on-scroll 
     app 
-    extended
+    :extended="isTopPage"
     extension-height="394px"
-    :src="require('@/assets/images/test_top_backgroundimage.jpeg')"
+    :src="(isTopPage) ? getImgPath(): false"
   >
     <slot />
   </v-app-bar>
@@ -15,10 +15,18 @@
 
 <script>
 export default {
+  props: {
+    isTopPage: Boolean
+  },
   data() {
     return {
       clipped: false,
     }
   },
+  methods: {
+    getImgPath() {
+      return require('@/assets/images/test_top_backgroundimage.jpeg');
+    }
+  }
 }
 </script>
