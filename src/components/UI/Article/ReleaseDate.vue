@@ -3,7 +3,7 @@
     cols="6" 
   >
     <div id="released_at">
-      <Pelement :font_size="font_size" class="ma-0">
+      <Pelement :font_size="font_size">
         {{ release.getFullYear() }} 年
         {{ release.getMonth() + 1}} 月
         {{ release.getDate() }} 日
