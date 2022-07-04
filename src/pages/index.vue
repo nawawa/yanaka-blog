@@ -1,13 +1,18 @@
 <template>
   <div>
-    <h1>谷中研究所のブログ（予定）</h1>
-    <p>絶賛工事中！</p>
-
-    <NuxtLink to="/articles">記事一覧</NuxtLink>
+    <h1 style="text-align: center;">新着記事</h1>
+    <LayoutsArticleIndexCard :articles="articles" />
   </div>
 </template>
 
 <script>
 export default {
+  async asyncData({ $microcms }) {
+    const data = await $microcms.get({
+      endpoint: `blogs`,
+      queries: {limit: 6}
+    });
+    return { articles: data.contents };
+  },
 }
 </script>
