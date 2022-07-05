@@ -1,8 +1,17 @@
 <template>
-  <div>
-    <h1 style="text-align: center;">新着記事</h1>
+  <UITopContainer>
+    <UIHeading>
+      新着記事
+    </UIHeading>
+
     <LayoutsArticleIndexCard :articles="articles" />
-  </div>
+
+    <UIHeading>
+      <UIStyledNuxtLink :link="`/articles`">
+        ぜんぶ読む
+      </UIStyledNuxtLink>
+    </UIHeading>
+  </UITopContainer>
 </template>
 
 <script>
