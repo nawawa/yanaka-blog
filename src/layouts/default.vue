@@ -5,6 +5,7 @@
     <v-main>
       <Nuxt />
     </v-main>
+    <LayoutsFooter />
   </v-app>
 </template>
 
