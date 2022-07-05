@@ -14,6 +14,6 @@ export default {
 
 <style lang="scss" scoped>
   a {
-    color: black;
+    color: black !important;
   }
 </style>
