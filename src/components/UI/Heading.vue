@@ -1,5 +1,5 @@
 <template>
-  <h1 class="mt-6" style="text-align: center;">
+  <h1 class="mt-6">
     <slot />
   </h1>
 </template>
@@ -8,3 +8,9 @@
 export default {
 }
 </script>
+
+<style lang="scss" scoped>
+  h1 {
+    text-align: center;
+  }
+</style>
