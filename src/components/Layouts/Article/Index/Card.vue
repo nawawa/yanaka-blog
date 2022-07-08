@@ -17,6 +17,7 @@
               <h4>{{ article.title }}</h4>
             </UIStyledNuxtLink>
             <UIArticleReleaseDateText :font_size="10" :release="new Date(article.createdAt)" />
+            <UIArticleListCardAuthorList :authors="article.author" />
           </v-col>
         </v-row>
       </v-card>
