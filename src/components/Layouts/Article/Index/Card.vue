@@ -13,7 +13,9 @@
             <UIArticleListCardEyecatch :eyecatch="article.eyecatch" :articleId="article.id" />
           </v-col>
           <v-col cols="6">
-            <h4>{{ article.title }}</h4>
+            <UIStyledNuxtLink :link="article.id">
+              <h4>{{ article.title }}</h4>
+            </UIStyledNuxtLink>
             <UIArticleReleaseDateText :font_size="10" :release="new Date(article.createdAt)" />
           </v-col>
         </v-row>
