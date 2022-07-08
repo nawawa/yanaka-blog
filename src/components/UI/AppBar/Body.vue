@@ -7,7 +7,7 @@
     app 
     :extended="isTopPage"
     extension-height="394px"
-    :src="(isTopPage) ? getImgPath(): false"
+    :src="(isTopPage) ? getImgPath(): undefined"
   >
     <slot />
   </v-app-bar>
