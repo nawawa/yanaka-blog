@@ -1,28 +1,24 @@
 <template>
-  <UIAppBarBody
-    @toggleDrawer="$emit('toggleDrawer')" 
-    :isTopPage="getNowPage()"
-  >
-    <UIAppBarLogo />
-     <v-spacer />
-    <UIAppBarTextMenu :text="`カテゴリ`" :link="`/about`" />
-     <v-spacer />
-    <UIAppBarTextMenu :text="`カテゴリ`" :link="`/about`" />
-     <v-spacer />
-    <UIAppBarTextMenu :text="`カテゴリ`" :link="`/about`" />
-    <v-spacer />
-    <UIAppBarTextMenu :text="`ヤナケンについて`" :link="`/about`" />
-    <v-spacer />
-    <UIAppBarTextMenu :text="`ライター`" :link="`/writers`" />
-    <v-spacer />
-    <UIAppBarMenuBtn @toggleDrawer="$emit('toggleDrawer')" />
-  </UIAppBarBody>
+  <div>
+    <UIAppBarTopPageBody 
+      v-if="isTopPage" 
+      @toggleDrawer="$emit('toggleDrawer')" 
+    >
+      <slot />
+    </UIAppBarTopPageBody>
+    <UIAppBarBody
+      v-else
+      @toggleDrawer="$emit('toggleDrawer')" 
+    >
+      <slot />
+    </UIAppBarBody>
+  </div>
 </template>
 
 <script>
 export default {
-  methods: {
-    getNowPage() {
+  computed: {
+    isTopPage() {
       return (this.$route.path === '/');
     }
   }
