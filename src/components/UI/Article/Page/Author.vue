@@ -24,7 +24,7 @@ export default {
     display: flex;
     align-items: center;
     p {
-      margin: 0 !important; // カードの方では12px
+      margin: 0 !important;
     }
   }
   img {
