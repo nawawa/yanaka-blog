@@ -3,7 +3,7 @@
     <UIArticlePageAuthorList 
       v-for="author in authors" 
       :key="author.index" 
-      class="mb-0 mt-2"
+      class="mb-4 mt-2"
     >
       <UIArticlePageAuthor 
         :icon_size="14" 

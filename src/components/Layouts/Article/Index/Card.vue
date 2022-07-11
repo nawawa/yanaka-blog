@@ -13,10 +13,15 @@
             <UIArticleListCardEyecatch :eyecatch="article.eyecatch" :articleId="article.id" />
           </v-col>
           <v-col cols="6">
-            <UIStyledNuxtLink :link="`/articles/${article.id}`">
+            <UIStyledNuxtLink 
+              :link="`/articles/${article.id}`"
+            >
               <h4>{{ article.title }}</h4>
             </UIStyledNuxtLink>
-            <UIArticleReleaseDateText :font_size="10" :release="new Date(article.createdAt)" />
+            <UIArticleListCardInfo 
+              :category="article.category" 
+              :createdAt="new Date(article.createdAt)"
+            />
             <UIArticleListCardAuthorList :authors="article.author" />
             <UIArticleListCardContent :content="article.content" :articleId="article.id" />
           </v-col>
