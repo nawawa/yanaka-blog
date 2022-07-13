@@ -1,11 +1,13 @@
 <template>
-  <v-card-title
-    :class="`py-1 px-0  ${ text }`"
-  >
-    <strong>
-      {{ title }}
-    </strong>
-  </v-card-title>
+  <UIStyledNuxtLink :link="`/articles/${articleId}`">
+    <v-card-title
+      :class="`py-1 px-0  ${ text }`"
+    >
+      <strong>
+        {{ title }}
+      </strong>
+    </v-card-title>
+  </UIStyledNuxtLink>
 </template>
 
 <script>
