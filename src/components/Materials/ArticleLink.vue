@@ -1,5 +1,7 @@
 <template>
-  <PartsNuxtLinkText :to="`/articles/${articleId}`" />
+  <PartsNuxtLinkText :to="`/articles/${articleId}`">
+    <slot />
+  </PartsNuxtLinkText>
 </template>
 
 <script>

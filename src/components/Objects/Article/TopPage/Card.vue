@@ -12,7 +12,7 @@
       </v-col>
       <v-col cols="6">
         <MaterialsArticleLink 
-          :link="`/articles/${article.id}`"
+          :articleId="article.id"
         >
           <h4>{{ article.title }}</h4>
         </MaterialsArticleLink>
