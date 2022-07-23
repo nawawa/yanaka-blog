@@ -17,3 +17,13 @@ a {
     opacity: 0.7;
   }
 }
+
+/*
+ページネーションボタンの影を消す
+*/
+.v-pagination__navigation {
+  box-shadow: none !important;
+}
+.v-pagination__item {
+  box-shadow: none !important;
+}
