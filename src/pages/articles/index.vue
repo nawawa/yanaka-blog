@@ -1,5 +1,7 @@
 <template>
-  <PagesArticles />
+  <PagesArticles 
+    :articles="articles"
+  />
 </template>
 
 <script>
@@ -9,9 +11,6 @@ export default {
       endpoint: `blogs`,
     });
     return { articles: data.contents };
-  },
-  mounted() {
-    this.$store.commit('articles/get', this.articles)
   },
 }
 </script>
