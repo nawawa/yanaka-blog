@@ -9,11 +9,12 @@
     />
     
     <v-pagination
-      v-if="articleLength > pageButtonLength"
+      v-if="articleLength > pageArticleLength"
       circle
-      :length="pageButtonLength"
-      :total-visible="totalVisible"
+      :total-visible="pageButtonLength"
+      :length="indexPageLength"
       :value="thisPage"
+      @input="getPageNumber"
     >
     </v-pagination>
   </div>
@@ -25,6 +26,9 @@ export default {
     articles: Array,
     pageButtonLength: {
       default: 6
+    },
+    pageArticleLength: {
+      default: 6
     }
   },
   computed: {
@@ -34,7 +38,7 @@ export default {
     thisPage() {
       return Number(this.$route.query.page)
     },
-    totalVisible() {
+    indexPageLength() {
       return Math.ceil( (this.articleLength) / 6 )
     },
     slicedArticles() {
@@ -42,6 +46,11 @@ export default {
       const startIndex = endIndex - 6
 
       return this.articles.slice(startIndex, endIndex)
+    }
+  },
+  methods: {
+    getPageNumber(clickedPageNumber) {
+      this.$router.push(`/articles?page=${clickedPageNumber}`)
     }
   }
 }
