@@ -21,7 +21,7 @@ export default {
       routes.push({
         path: '/articles/page/:p',
         component: resolve(__dirname, 'pages/articles/index.vue'),
-        name: 'page',
+        name: 'articlePage',
       })
     },
   },

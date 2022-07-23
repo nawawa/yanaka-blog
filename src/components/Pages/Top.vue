@@ -10,7 +10,7 @@
       />
 
     <PartsHeading>
-      <PartsNuxtLinkText :to="`/articles`">
+      <PartsNuxtLinkText :to="`/articles?page=1`">
         ぜんぶ読む
       </PartsNuxtLinkText>
     </PartsHeading>

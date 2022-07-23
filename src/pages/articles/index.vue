@@ -1,5 +1,7 @@
 <template>
-  <PagesArticles :articles="articles" />
+  <PagesArticles 
+    :articles="articles"
+  />
 </template>
 
 <script>
