@@ -12,8 +12,10 @@
 
 <script>
 export default {
-  props: {
-    articles: Array
-  },
+  computed: {
+    articles() {
+      return this.$store.state.articles.articles
+    }
+  }
 }
 </script>
